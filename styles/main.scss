@@ -1,0 +1,87 @@
+.wrapper{
+  margin: 100px auto;
+  max-width: 960px;
+
+  .stage{
+    list-style: none;
+    padding: 0;
+
+    .scene {
+      margin: 30px;
+      width: 260px;
+      height: 400px;
+      float: left;
+      perspective: 1000px;
+    }
+  }
+}
+.movie {
+	width: 260px;
+	height: 400px;
+	transform-style: preserve-3d;
+	transform: translateZ(-130px);
+	transition: transform 350ms;
+
+  &:hover {
+  	transform: rotateY(-78deg) translateZ(20px);
+  }
+
+  // &:hover .poster {
+  //   box-shadow: inset 300px 40px rgba(255,255,255,0.8);
+  // }
+
+    .poster  {
+     transform: translateZ(130px);
+     background-size: cover;
+     background-repeat: no-repeat;
+    }
+
+    .info {
+     transform: rotateY(90deg) translateZ(130px);
+     border: 1px solid #B8B5B5;
+     font-size: 0.75em;
+
+     header {
+       color: #FFF;
+       font-weight: bold;
+       height: 195px;
+       background-size: contain;
+       background-repeat: no-repeat;
+     }
+    }
+
+     .poster,
+     .info {
+       position: absolute;
+       width: 260px;
+       height: 400px;
+       background-color: #fff;
+       backface-visibility: hidden;
+     }
+}
+
+
+
+.scene:nth-child(1) .poster {
+  background-image: url(../img/poster01.jpg);
+}
+
+.scene:nth-child(2) .poster {
+  background-image: url(../img/poster02.jpg);
+}
+
+.scene:nth-child(3) .poster {
+  background-image: url(../img/poster03.jpg);
+}
+
+.scene:nth-child(1) .info header {
+  background-image: url(../img/still01.jpg);
+}
+
+.scene:nth-child(2) .info header {
+  background-image: url(../img/still02.jpg);
+}
+
+.scene:nth-child(3) .info header {
+  background-image: url(../img/still03.jpg);
+}
